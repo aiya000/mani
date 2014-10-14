@@ -2,7 +2,7 @@ $LOAD_PATH.unshift File.expand_path('../lib', __FILE__)
 require 'mani/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = 'Mani'
+  gem.name          = 'mani'
   gem.homepage      = 'https://github.com/NSinopoli/mani'
   gem.license       = 'BSD (3-Clause)'
   gem.summary       = 'A window automation tool'
