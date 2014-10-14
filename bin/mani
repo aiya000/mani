@@ -1,0 +1,48 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH.unshift(File.dirname(File.realpath(__FILE__)) + '/../lib')
+
+require 'mani'
+require 'mani/version'
+
+require 'optparse'
+
+class Mani
+  class CLI
+    # Parses command line options.
+    #
+    # @param [Array] args The command line arguments
+    def self.parse_options(args)
+      option_parser = OptionParser.new do |opts|
+        opts.banner = "Usage: mani FILE"
+
+        opts.separator ""
+
+        opts.separator "Example:"
+        opts.separator "  $ mani workspace_initializer.rb"
+
+        opts.separator ""
+
+        opts.separator "Options:"
+
+        opts.on("-v", "--version", "Print the version") do |v|
+          puts "Mani v#{Mani::Version::VERSION}"
+          exit
+        end
+
+        opts.on_tail("-h", "--help", "Show this message") do
+          puts opts
+          exit
+        end
+      end
+
+      option_parser.parse!(args)
+    end
+  end
+end
+
+ARGV << '-h' if ARGV.empty? && $stdin.tty?
+
+Mani::CLI.parse_options(ARGV) if $stdin.tty?
+
+load ARGF.file
