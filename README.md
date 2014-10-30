@@ -9,6 +9,10 @@ a few lines of code. Please open an
 [issue](https://github.com/NSinopoli/mani/issues) to add support for your
 favorite window manager.
 
+## Demo
+
+[![Mani Demo](/demo.png?raw=true "Mani Demo")](https://vimeo.com/110445089)
+
 ## Installation
 
 ```bash
