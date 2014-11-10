@@ -1,4 +1,4 @@
-Mani.new do
+Mani.new(window_manager: :xmonad) do
   window :urxvt, launch: 'urxvt' do
     # Copy the most recent report id
     run %q(
