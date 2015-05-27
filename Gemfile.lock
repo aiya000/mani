@@ -1,17 +1,18 @@
-GIT
-  remote: git://github.com/NSinopoli/x_do.git
-  revision: ff43fa555d1c497c0516bf12353ac64860faf1e6
+PATH
+  remote: .
   specs:
-    x_do (0.1.2)
-      ffi (>= 1.0.0)
+    mani (0.0.4)
+      x_do_bindings
 
 GEM
   remote: http://rubygems.org/
   specs:
     ffi (1.9.8)
+    x_do_bindings (0.2.0)
+      ffi
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  x_do!
+  mani!
