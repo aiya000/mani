@@ -17,5 +17,5 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(spec)/})
   gem.require_paths = ['lib']
 
-  gem.add_dependency 'x_do_bindings'
+  gem.add_dependency 'x_do_bindings', '0.2.1'
 end
